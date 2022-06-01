@@ -1,5 +1,6 @@
 "use strict";
 console.log("Hello from external JavaScript");
+function button(){
 alert('Welcome to my Website!');
 let ask = prompt("what's your fouvrite color? " , "green");
 alert("Great, " + ask + " that's my favorite color too");
@@ -54,16 +55,17 @@ function cuopon() {
     if (member != "yes" || "Yes" || "Y" || "YES") {
         if (bought > 2) {
             if(expired > 5){
-                offer = true;
+                offer = "OFFER Applied";
             }
-            else{offer = false;}
+            else{offer = "OFFER NOT Applied";}
         }
-        else{offer = false;}
+        else{offer = "OFFER NOT Applied";}
     }
     else if (expired > 5) {
-        offer = true;
+        offer = "OFFER Applied";
     }
-    else{offer = false;}
+    else{offer = "OFFER NOT Applied";}
+    alert(offer);
     console.log(offer);
 }
 cuopon();
@@ -84,4 +86,4 @@ function login() {
     }
     console.log("login is " + login);
 }
-login();
+login();};
