@@ -1,23 +1,43 @@
 "use strict";
-
-/* ########################################################################## */
-
+var color = prompt("What is your favourite color of the rainbow?", "red")
+function analyzeColor(Color) {
+    if("red" || "RED" || "Red"){
+        alert( color + " is for Roses")
+    }
+    if("orange" || "ORANGE" || "Orange"){
+        alert( color + " is for Oranges")
+    }
+    if("yellow" || "YELLOW" || "Yellow"){
+        alert( color + " is for Lemons")
+    }
+    if("green" || "GREEN" || "Green"){
+        alert( color + " is for Grass")
+    }
+    if("blue" || "BLUE" || "Blue"){
+        alert( color + " is for Water")
+    }
+    if("indigo" || "INDIGO" || "Indigo"){
+        alert( color + " is for Lapis Lasuli")
+    }
+    if("violet" || "VIOLET" || "Violet"){
+        alert( color + " is for Laveveder")
+    }
+    else {
+        alert("I don't know the color " + color);
+    }
+}
+analyzeColor(color)
 /**
  * TODO:
  * Create a function named `analyzeColor` that accepts a string that is a color
  * name as input. This function should return a message which relates to the
  * color stated in the argument of the function. For colors you do not have
  * responses written for, return a string stating so
- *
  * Example:
  *  > analyzeColor('blue') // returns "blue is the color of the sky"
  *  > analyzeColor('red') // returns "Strawberries are red"
- *
- *
  *  > analyzeColor('cyan') // returns "I don't know anything about cyan"
- *
  * You should use an if-else-if-else block to return different messages.
- *
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
