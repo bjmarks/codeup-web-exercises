@@ -1,32 +1,36 @@
 "use strict";
-var color = prompt("What is your favourite color of the rainbow?", "red")
-function analyzeColor(Color) {
-    if("red" || "RED" || "Red"){
-        alert( color + " is for Roses")
+
+var color = prompt("What is your favourite color of the rainbow?", "red");
+
+function analyzeColor(color) {
+    console.log(color);
+    if(color === ("red" || "RED" || "Red")){
+        alert( color + " is for Roses");
     }
-    if("orange" || "ORANGE" || "Orange"){
-        alert( color + " is for Oranges")
+    else if(color === ("orange" || "ORANGE" || "Orange")){
+        alert( color + " is for Oranges");
     }
-    if("yellow" || "YELLOW" || "Yellow"){
-        alert( color + " is for Lemons")
+    else if(color === ("yellow" || "YELLOW" || "Yellow")){
+        alert( color + " is for Lemons");
     }
-    if("green" || "GREEN" || "Green"){
-        alert( color + " is for Grass")
+    else if(color === ("green" || "GREEN" || "Green")){
+        alert( color + " is for Grass");
     }
-    if("blue" || "BLUE" || "Blue"){
-        alert( color + " is for Water")
+    else if(color === ("blue" || "BLUE" || "Blue")){
+        alert( color + " is for Water");
     }
-    if("indigo" || "INDIGO" || "Indigo"){
-        alert( color + " is for Lapis Lasuli")
+    else if(color === ("indigo" || "INDIGO" || "Indigo")){
+        alert( color + " is for Lapis Lasuli");
     }
-    if("violet" || "VIOLET" || "Violet"){
-        alert( color + " is for Laveveder")
+    else if(color === ("violet" || "VIOLET" || "Violet")){
+        alert( color + " is for Laveveder");
     }
     else {
         alert("I don't know the color " + color);
     }
 }
-analyzeColor(color)
+analyzeColor(color);
+
 /**
  * TODO:
  * Create a function named `analyzeColor` that accepts a string that is a color
