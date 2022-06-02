@@ -12,7 +12,7 @@ Example
 sayHello("codeup") // returns "Hello, codeup!"
 */
 var helloMessage = sayHello("benjamin");
-console.log((helloMessage));
+console.log(helloMessage);
 /*
 TODO:
 Call the function 'sayHello' and pass your name as a string literal argument.
