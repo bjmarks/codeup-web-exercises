@@ -1,9 +1,9 @@
 "use strict";
-var myName = "Benjamin";
 function sayHello(name){
     var message = "hello " + name;
-    return message;
+   console.log(message);
 }
+sayHello("codeup");
 /*
 TODO:
 Create a function called 'sayHello' that takes a parameter 'name'.
@@ -11,15 +11,16 @@ When called, the function should return a message that says hello to the passed 
 Example
 sayHello("codeup") // returns "Hello, codeup!"
 */
-var helloMessage = sayHello(myName);
-console.log(helloMessage);
+var helloMessage = sayHello("benjamin");
+console.log((helloMessage));
 /*
 TODO:
 Call the function 'sayHello' and pass your name as a string literal argument.
 Store the result of the function call in a variable named 'helloMessage'.
 console.log 'helloMessage' to check your work
 */
-myName = "bjmarks";
+var myName = "benjamin J."
+sayHello(myName);
 /*
 TODO:
  Store your name as a string in a variable named 'myName', and pass that
