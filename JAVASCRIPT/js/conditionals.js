@@ -1,7 +1,5 @@
 "use strict";
-
-var color = prompt("What is your favourite color of the rainbow?", "red");
-
+//var color = prompt("What is your favourite color of the rainbow?", "red");
 function analyzeColor(color) {
     console.log(color);
     if(color === ("red" || "RED" || "Red")){
@@ -29,8 +27,7 @@ function analyzeColor(color) {
         alert("I don't know the color " + color);
     }
 }
-analyzeColor(color);
-
+//analyzeColor(color);
 /**
  * TODO:
  * Create a function named `analyzeColor` that accepts a string that is a color
@@ -45,34 +42,72 @@ analyzeColor(color);
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-
-// Don't change the next two lines!
-// These lines create two variables for you:
-// - `colors`: a list of the colors of the rainbow
-// - `randomColor`: contains a single random color value from the list (this
-//                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+ var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet' ];
+ var randomColor = colors[Math.floor(Math.random() * colors.length)];
+// console.log(analyzeColor(randomColor));
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-
+ function swicthAnalyzeColor(color){
+    console.log(color);
+    switch(color){
+    case "red" || "RED" || "Red" : console.log( color + " is for Roses");
+    break;
+    case "orange" || "ORANGE" || "Orange" : console.log( color + " is for Oranges");
+    break;
+    case "yellow" || "YELLOW" || "Yellow" : console.log( color + " is for Lemons");
+    break;
+    case "green" || "GREEN" || "Green" : console.log( color + " is for Grass");
+    break;
+    case "blue" || "BLUE" || "Blue" : console.log( color + " is for Water");
+    break;
+    case "indigo" || "INDIGO" || "Indigo" : console.log( color + " is for Lapis Lasuli");
+    break;
+    case "violet" || "VIOLET" || "Violet" : console.log( color + " is for Laveveder");
+    break;
+    default :  console.log("I don't know the color " + color);
+    break;
+    }
+}
+swicthAnalyzeColor(randomColor);
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-
-/* ########################################################################## */
-
+var luckyNumber = Math.round(Math.random() * 5);
+var totalAmount = 100;
+console.log(luckyNumber);
+function calculateTotal(x){
+    switch (x) {
+        case 1:
+            console.log("You're Discount is  10% for " + (totalAmount * .1) + " Off.");
+        break;
+        case 2:
+            console.log("You're Discount is  25% for "+ (totalAmount * .25) + " Off.");
+        break;
+        case 3:
+            console.log("You're Discount is  35% for "+ (totalAmount * .35) + " Off.");
+        break;
+        case 4:
+            console.log("You're Discount is  50% for " + (totalAmount * .5) + " Off.");
+        break;
+        case 5:
+            console.log("You're Discount is 100% for " + (totalAmount * .100) + " Off.");
+        break;
+        default:
+            console.log("You're Discount is an amazing 0% for " + (totalAmount * 0) + " Off.");
+        break;
+    }
+}
+calculateTotal(luckyNumber, totalAmount);
 /**
  * TODO:
  * Suppose there's a promotion in Walmart, each customer is given a randomly
@@ -80,18 +115,18 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
  * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
  * everything for free!.
- *
  * Write a function named `calculateTotal` which accepts a lucky number and total
  * amount, and returns the discounted price.
- *
  * Example:
  * calculateTotal(0, 100) // returns 100
  * calculateTotal(4, 100) // returns 50
  * calculateTotal(5, 100) // returns 0
- *
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
+
+
 
 /**
  * TODO:
@@ -102,7 +137,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+// var luckyNumber1 = Math.floor(Math.random() * 6);
 
 /**
  * TODO:
