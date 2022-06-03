@@ -84,26 +84,33 @@ swicthAnalyzeColor(randomColor);
  */
 var luckyNumber = Math.round(Math.random() * 5);
 var totalAmount = 100;
+var discount;
 console.log(luckyNumber);
 function calculateTotal(x){
     switch (x) {
         case 1:
             console.log("You're Discount is  10% for " + (totalAmount * .1) + " Off.");
+            discount = 0.10;
         break;
         case 2:
             console.log("You're Discount is  25% for "+ (totalAmount * .25) + " Off.");
+            discount = 0.25;
         break;
         case 3:
             console.log("You're Discount is  35% for "+ (totalAmount * .35) + " Off.");
+            discount = 0.35;
         break;
         case 4:
             console.log("You're Discount is  50% for " + (totalAmount * .5) + " Off.");
+            discount = 0.50;
         break;
         case 5:
-            console.log("You're Discount is 100% for " + (totalAmount * .100) + " Off.");
+            console.log("You're Discount is 100% for " + (totalAmount * 1) + " Off.");
+            discount = 1;
         break;
         default:
             console.log("You're Discount is an amazing 0% for " + (totalAmount * 0) + " Off.");
+            discount = 0;
         break;
     }
 }
@@ -124,11 +131,7 @@ calculateTotal(luckyNumber, totalAmount);
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-
-
-
-
-/**
+/*
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
  * (In this line of code, 0 is inclusive, and 6 is exclusive)
@@ -138,22 +141,62 @@ calculateTotal(luckyNumber, totalAmount);
  */
 // Generate a random number between 0 and 6
 // var luckyNumber1 = Math.floor(Math.random() * 6);
-
+var tot = prompt("your total ammount is ", "100");
+alert("your lucky number is " + luckyNumber);
+calculateTotal(luckyNumber, tot);
+alert('your total with discount is ' + (tot * discount));
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
  * would like to enter a number. If they click 'Ok', prompt the user for a
  * number, then use 3 separate alerts to tell the user:
- *
  * - whether the number is even or odd
  * - what the number plus 100 is
  * - if the number is negative or positive
- *
  * Do *NOT* display any of the above information
  * if the user enters a value that is not of the number data type.
  * Instead, use an alert to inform them of the incorrect input data type.
- *
- *
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+function jscript() {
+    let x = confirm("Would you like to input a number?");
+        if(true){
+            var takt = prompt("what is the Number young travler? ", "1");
+            tFun(takt);
+            console.log(takt);
+                function tFun(x){
+                    console.log(takt);
+                    isOdd(takt);
+                    function isOdd(x){
+                        if(takt % 2 == 0){
+                            alert("your number " + takt + " is Even");
+                        }
+                        else {
+                            alert("your number " + takt + " is Odd");
+                        }
+                    }
+                    plusH(takt);
+                    function plusH(x){
+                        alert("your number " + takt + " is now " + (takt * 100));
+                    }
+                    isPos(takt);
+                    function isPos(x){
+                        if(takt > 0) {
+                        alert("your number "+ takt + " is in the positives");
+                        }
+                        else if (takt < 0){
+                            alert("your number " + takt + "is in the negitives");
+                        }
+                        else {
+                            alert("your number " + takt + "is zero");
+                        }
+                    }
+                }
+        }
+        else{
+            alert("alright I won't tell you the story of the Holy Flail");
+        }
+}
+jscript();
+
