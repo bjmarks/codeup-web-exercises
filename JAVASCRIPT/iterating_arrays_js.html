@@ -1,0 +1,118 @@
+<!-- Arrays
+
+An array is a data structure that holds an ordered list of items. Each slot in a JavaScript array can hold any type of data.
+
+Declaring an Array
+
+In JavaScript, arrays are denoted by square brackets, []. The items in an array are called elements, and are separated by commas.
+
+Let's take a look at an array literal. We have seen number literals (such as 42) and string literals before (such as 'codeup'). Here are several array literals:
+
+
+[] // an empty array
+
+[1] // an array with one element
+
+[1, 2, 3, 4, 5] // an array with 5 elements
+
+["one", 42, [8, 9, 10]] // an array with 3 elements all of different types
+// notice that the array above does *not* have 5 elements, rather the last
+// element is itself an array with 3 elements in it
+Like the other data types we have seen, arrays can be stored in variables.
+
+
+var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+In above example, a variable called shapes is declared and initialized with an array of 4 strings. As you can see, the value assigned is surrounded by square brackets, telling JavaScript that we are defining an array. Inside the brackets is a comma separated list of values. While there are other methods, the use of square brackets is the most common way to create an array in JavaScript.
+
+Counting Array Items
+
+To find out how many items are in an array, you can use the length property. Here is an example:
+
+
+var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+
+console.log(shapes.length); // 4
+Accessing Array Elements
+
+Once you have an array of values, you will probably want to use the data inside the array for something. Arrays are zero-indexed, which means the first slot in an array is actually 0.
+
+
+array    [ 1, 2, 3, 4 ]
+           ^  ^  ^  ^
+           |  |  |  |
+indices    0  1  2  3
+Array elements are accessed by adding an opening and closing square bracket with the index of the item to be accessed inside the brackets. Here are some examples:
+
+
+var numbers = [1, 2, 3, 4];
+console.log(numbers[0]); // 1
+console.log(numbers[1]); // 2
+console.log(numbers[2]); // 3
+console.log(numbers[3]); // 4
+
+var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+
+console.log('There are ' + shapes.length + ' shapes in the array');
+
+console.log('The first shape is: ' + shapes[0]);
+// The first shape is: square
+
+console.log('The second shape is: ' + shapes[1]);
+// The second shape is: rectangle
+
+console.log('The third shape is: ' + shapes[2]);
+// The third shape is: circle
+
+console.log('The fourth shape is: ' + shapes[3]);
+// The fourth shape is: triangle
+
+console.log('The fifth shape is: ' + shapes[4]);
+// The fifth shape is: undefined
+When we try to access an index in the array that does not exist, as in that of the fifth shape, we get a value of undefined.
+
+Iterating Arrays
+
+To iterate means to repeat a process to achieve a desired result. When you iterate over an array, it means that you cycle/traverse through the indices and elements of the array. We can use the looping statements we learned earlier to iterate through arrays in JavaScript.
+
+For Loop
+
+
+var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+
+// loop through the array and log the values
+for (var i = 0; i < shapes.length; i++) {
+    console.log('The shape at index ' + i + ' is: ' + shapes[i]);
+}
+Here we are constructing a for loop that starts at zero (this index of the first element in any array), and ends at the length of the array minus one (the index of the last element in any array). We can then use i to index our array and refer to every element sequentially.
+
+For-Each Loop
+
+JavaScript arrays have a forEach method that can be used as an alternative to a for loop.
+
+The forEach method on an array takes another function as a parameter and doesn't have a return value. The function passed to forEach takes in up to 3 parameters that will provide access to the array element, the corresponding index, and the array itself. We can refer to the function passed to .forEach as a callback function. The callback function will be called for every item in the array.
+
+
+someArray.forEach(function(element, index, array) {
+    // ...
+})
+By convention, we will name our arrays a plural noun, and refer to individual elements by the singular version of the noun. In previous examples, we had used an array named shapes which means we can define the parameter name of the .forEach callback as shape.
+
+
+var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+
+// loop through the array and log the values
+shapes.forEach(function(shape) {
+    console.log('Here is a lovely shape: ' + shape + '.');
+});
+Note that we can omit parameters we don't intend to use.
+
+Exercises
+
+Please follow the instructions below.
+
+Download iterating.js and save it to your js directory.
+Create an HTML file named iterating_arrays_js.html.
+Add a <script> tag to your HTML to include iterating.js.
+Open iterating.js and complete the TODO items there.
+View the results in your browser to test for the expected output.
+Finally, commit the changes to your git repository, and push to GitHub. -->
