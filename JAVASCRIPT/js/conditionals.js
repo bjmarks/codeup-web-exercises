@@ -82,7 +82,7 @@ swicthAnalyzeColor(randomColor);
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-var luckyNumber = Math.round(Math.random() * 5);
+var luckyNumber = Math.round(Math.random() * 6);
 var totalAmount = 100;
 var discount;
 console.log(luckyNumber);
