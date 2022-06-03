@@ -1,5 +1,5 @@
 "use strict";
-//var color = prompt("What is your favourite color of the rainbow?", "red");
+var color = prompt("What is your favourite color of the rainbow?", "red");
 function analyzeColor(color) {
     console.log(color);
     if(color === ("red" || "RED" || "Red")){
@@ -27,7 +27,7 @@ function analyzeColor(color) {
         alert("I don't know the color " + color);
     }
 }
-//analyzeColor(color);
+analyzeColor(color);
 /**
  * TODO:
  * Create a function named `analyzeColor` that accepts a string that is a color
@@ -44,7 +44,7 @@ function analyzeColor(color) {
  */
  var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet' ];
  var randomColor = colors[Math.floor(Math.random() * colors.length)];
-// console.log(analyzeColor(randomColor));
+console.log(analyzeColor(randomColor));
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
@@ -140,7 +140,7 @@ calculateTotal(luckyNumber, totalAmount);
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber1 = Math.floor(Math.random() * 6);
+var luckyNumber1 = Math.floor(Math.random() * 6);
 var tot = prompt("your total ammount is ", "100");
 alert("your lucky number is " + luckyNumber);
 calculateTotal(luckyNumber, tot);

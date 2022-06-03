@@ -1,4 +1,5 @@
 
+/*
 While Loops
 
 Create a file named while.js in the js directory.
@@ -37,3 +38,4 @@ The output should be similar to the following:
 Cannot sell you 6 cones I only have 3...  // If there are not enough cones
 Yay! I sold them all! // If there are no more cones
 1. Finally, commit the changes to your git repository, and push to GitHub.
+*/
