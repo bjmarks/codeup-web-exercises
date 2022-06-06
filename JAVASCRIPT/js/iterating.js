@@ -17,20 +17,25 @@
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-    names.forEach(list(names, i => {
-        names[i]
-    }));
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-
+    for (let i = 0; i < names.length; i++) {
+        console.log("For loop " + names[i]);
+    }
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-
+     names.forEach(names=> {
+        console.log("forEach loop " + names);
+    });
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
@@ -44,5 +49,15 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+    var race = [1, 2, 3, 4, 5];
+    function first(race) {
+        console.log(race[0]);
+    }
+    function second(race) {
+        console.log(race[1]);
+    }
+    function last(race) {
+        console.log(race[race.length + 1]);
+    }
 
 })();
