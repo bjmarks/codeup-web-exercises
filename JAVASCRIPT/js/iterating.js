@@ -49,15 +49,17 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-    var race = [1, 2, 3, 4, 5];
+    var race = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     function first(race) {
         console.log(race[0]);
     }
+    first(race);
     function second(race) {
         console.log(race[1]);
     }
+    second(race);
     function last(race) {
-        console.log(race[race.length + 1]);
+        console.log(race[race.length - 1]);
     }
-
+    last(race);
 })();
