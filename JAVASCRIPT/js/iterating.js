@@ -1,24 +1,25 @@
 (function(){
     "use strict";
-
     /**
      * TODO:
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-
+    var names = ["Benjamin", "Katherin", "Matthew", "Jose"];
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-
+    console.log(names.length);
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-
+    names.forEach(list(names, i => {
+        names[i]
+    }));
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
