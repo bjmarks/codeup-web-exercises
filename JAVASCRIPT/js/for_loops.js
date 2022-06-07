@@ -23,8 +23,8 @@ function countIncrease(x) {
         for (let a = 1; a <= i; a++) {
             count.push(i);
         }
-        console.log(count.join(""));
     }
+    console.log(count.join(""));
 }
 //countIncrease();
 function countDown(){
