@@ -1,4 +1,4 @@
-/*
+
 var rnd = Math.floor((Math.random()*50)+1);
 var message = 'Random odd number to skip is: ' + isOdd(rnd);
 console.log(message);
@@ -19,7 +19,6 @@ for(var i = 1; i < 50; i++){
 	console.log('Here is an odd number: ' + i);
     }
 }
-*/
 console.log("Number to skip is: 27");
 for(var i = 1; i < 50; i++){
 	if ((i % 2) === 0) {

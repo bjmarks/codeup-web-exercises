@@ -1,0 +1,7 @@
+h1 {
+    color: red;
+}
+.fancy-header h1{
+    color: rebeccapurple;
+    text-decoration: underline;
+}
