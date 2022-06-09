@@ -17,6 +17,11 @@
      */
     console.log(planetsArray.join(" <br> "));
     document.write(planetsArray.join(" <br> "));
+
+
+
+
+    
     var spliUll = ["Alysha", "Benjamin", "Carlos", "Daneil"];
     var text = '<ul>';
         for (let i = 0; i < spliUll.length; i++) {

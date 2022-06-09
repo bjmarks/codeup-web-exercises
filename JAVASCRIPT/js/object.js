@@ -44,9 +44,9 @@
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
-    shoppers.forEach(function (item, index, array){
+    shoppers.forEach(function (item){ 
         if(item["amount"] > 200) {
-            console.log(item["name"] + ": owed $" + item["amount"] + " and has spent enough to get a 12% discount, the new price will be $" + (item["amount"] - (item["amount"] * .12)));
+            console.log(item.name + ": owed $" + item["amount"] + " and has spent enough to get a 12% discount, the new price will be $" + (item["amount"] - (item["amount"] * .12)));
         }
         else{
             console.log(item["name"] + ": owes $" + item["amount"] + " and hasn't spent enough to get a discount, if you spend $" + (200 - item["amount"]) + " you could Get a 12% dicount on your purchace, with savings starting at $" + (200 * .12) + " off");
@@ -63,36 +63,61 @@
      * > console.log(books[0].title) // "The Salmon of Doubt"
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
-     */
-    //
-    // Boys are from Jupiter, Gilrs are from College, Dogs are from Neptune", "Jean", "Donaldson
-    // The Totaly Real Book Writen by Jim Carry", "Ryan", "Renolds
-    // Morgan Freeman Autobiography", "Kevin", "Hart
-    // Dawn", "Scott", "Curtis
-    // I'm Running to work because I can't afford gas", "Gas", "Prices
-    // Harry Potter", "J.K.", "Rowling
-let books = [{
-    title: "The Begging After the End",
-    author: {
-        firstName: "Arthur",
-        lastName: "Leywin"}},
-             {
-    title: "That Time I Got Reincarnated As a Chew Toy",
-    author: {
-        firstName: "Fuse",
-        lastName: "Tempest"}},
-             {title: "The King of the Fries",
-    author: {
-        firstName: "Jr Roger",
-        lastName: "Tolkien"}},
-             {title: "The Tiger, The Warlock, and The Nightstand",
-    author: {
-        firstName: "Charlie Sheen",
-        lastName: "Lewis"}}
-];
-    console.log(books[2].title)
-    console.log(books[0].author.lastName);
-
+//      */
+// let books = [{
+//     title: "The Begging After the End",
+//     author: {
+//         firstName: "Arthur",
+//         lastName: "Leywin"}},
+//              {
+//     title: "That Time I Got Reincarnated As a Chew Toy",
+//     author: {
+//         firstName: "Fuse",
+//         lastName: "Tempest"}},
+//              {
+//     title: "The King of the Fries",
+//     author: {
+//         firstName: "Jr Roger",
+//         lastName: "Tolkien"}},
+//              {
+//     title: "The Tiger, The Warlock, and The Nightstand",
+//     author: {
+//         firstName: "Charlie Sheen",
+//         lastName: "Lewis"}},
+//              {
+//     title: "Boys are from Jupiter, Gilrs are from College, Dogs are from Neptune",
+//     author: {
+//         firstName: "Jean",
+//         lastName: "Donaldson"}},
+//              {
+//     title: "The Totaly Real Book Writen by Jim Carry",
+//     author: {
+//         firstName: "Ryan", 
+//         lastName: "Renoldds"}},
+//              {
+//     title: "Morgan Freeman Autobiography",
+//     author: {
+//         firstName: "Kevin",
+//         lastName: "Hart"}},
+//              {
+//     title: "Dawn",
+//     author: {
+//         firstName: "Scott", 
+//         lastName: "Curtis"}},
+//              {   
+//     title: "I'm Running to work because I can't afford gas",
+//     author: {
+//         firstName: "Gas",
+//         lastName: "Prices"}},
+//              { 
+//     title: "Harry Potter",
+//     author: {
+//         firstName: "J.K.",
+//         lastName: "Rowling"}}
+// ];
+//     console.log(books[2].title)
+//     console.log(books[0].author.lastName);
+//     console.log(books[4].author.lastName);
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -116,8 +141,10 @@ let books = [{
      *      ---
      *      ...
      */
-
-    /**
+     books.forEach(function(book, i){
+    console.log("Book # " + (i + 1) + ": " + books[i].title + "\n" + books[i].title + " written by " + books[i].author.firstName + " " + books[i].author.lastName);  
+     });
+    /*
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
      *   name and returns a book object with the properties described
@@ -127,5 +154,27 @@ let books = [{
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-
-})();
+    //    var iTitle = prompt("What is the title Of The book?");
+    //    var iFirstName = prompt("what is the Authors First Namt?");
+    //    var iLastName = prompt("What is the Authors Last Name?");
+    // function createBook(title, firstName,lastName) {
+    //     console.log(books)
+    //     if(books){
+    //         books = title.push(iTitle);
+    //         books[1] = firstName.push(iFirstName);
+    //         books[1] = lastName.push(iLastName);
+    //     }
+    //     else{
+    //         let books = [{
+    //             title: iTitle ,
+    //             author: {
+    //                 firstName: iFirstName,
+    //                 lastName: iLastName }}]    
+    //     }
+    //     showBookInfo();
+    // }
+    // function showBookInfo(books) {
+    //     console.log(books.title + books.author.firstName + books.author.lastName);
+    // }
+    // createBook(iTitle,iFirstName,iLastName);
+        })();
