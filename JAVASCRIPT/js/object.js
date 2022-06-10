@@ -141,9 +141,11 @@
      *      ---
      *      ...
      */
-    // books.forEach(function(book, i){
-    // console.log("Book # " + (i + 1) + ": " + books[i].title + "\n" + books[i].title + " written by " + books[i].author.firstName + " " + books[i].author.lastName);  
-    // });
+
+     books.forEach(function(book, i){
+    console.log("Book # " + (i + 1) + ": " + books[i].title + "\n" + books[i].title + " written by " + books[i].author.firstName + " " + books[i].author.lastName);  
+     });
+
     /*
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
