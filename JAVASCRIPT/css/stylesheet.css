@@ -1,6 +1,9 @@
 html{
     background-color: steelblue;
 }
+*{
+    color: rgba(255, 0, 127, 1);
+}
 ul{
     list-style: none;
     color: white;
