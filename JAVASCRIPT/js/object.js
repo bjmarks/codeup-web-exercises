@@ -48,10 +48,10 @@
     ];
     shoppers.forEach(function (item){ 
         if(item["amount"] > 200) {
-            console.log(item.name + ": owed $" + item["amount"] + " and has spent enough to get a 12% discount, the new price will be $" + (item["amount"] - (item["amount"] * .12)));
+            console.log(`${item.name} : owed $ ${item["amount"]} and has spent enough to get a 12% discount, the new price will be $ ${(item["amount"] - (item["amount"] * .12))}`);
         }
         else{
-            console.log(item["name"] + ": owes $" + item["amount"] + " and hasn't spent enough to get a discount, if you spend $" + (200 - item["amount"]) + " you could Get a 12% dicount on your purchace, with savings starting at $" + (200 * .12) + " off");
+            console.log(`${item["name"]} : owes $ ${item["amount"]} and hasn't spent enough to get a discount, if you spend $ ${(200 - item["amount"])} you could Get a 12% dicount on your purchace, with savings starting at $ ${(200 * .12)} off`);
         }
     });
      /** TODO:
@@ -66,60 +66,60 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
 //      */
-// let books = [{
-//     title: "The Begging After the End",
-//     author: {
-//         firstName: "Arthur",
-//         lastName: "Leywin"}},
-//              {
-//     title: "That Time I Got Reincarnated As a Chew Toy",
-//     author: {
-//         firstName: "Fuse",
-//         lastName: "Tempest"}},
-//              {
-//     title: "The King of the Fries",
-//     author: {
-//         firstName: "Jr Roger",
-//         lastName: "Tolkien"}},
-//              {
-//     title: "The Tiger, The Warlock, and The Nightstand",
-//     author: {
-//         firstName: "Charlie Sheen",
-//         lastName: "Lewis"}},
-//              {
-//     title: "Boys are from Jupiter, Gilrs are from College, Dogs are from Neptune",
-//     author: {
-//         firstName: "Jean",
-//         lastName: "Donaldson"}},
-//              {
-//     title: "The Totaly Real Book Writen by Jim Carry",
-//     author: {
-//         firstName: "Ryan", 
-//         lastName: "Renoldds"}},
-//              {
-//     title: "Morgan Freeman Autobiography",
-//     author: {
-//         firstName: "Kevin",
-//         lastName: "Hart"}},
-//              {
-//     title: "Dawn",
-//     author: {
-//         firstName: "Scott", 
-//         lastName: "Curtis"}},
-//              {   
-//     title: "I'm Running to work because I can't afford gas",
-//     author: {
-//         firstName: "Gas",
-//         lastName: "Prices"}},
-//              { 
-//     title: "Harry Potter",
-//     author: {
-//         firstName: "J.K.",
-//         lastName: "Rowling"}}
-// ];
-//     console.log(books[2].title)
-//     console.log(books[0].author.lastName);
-//     console.log(books[4].author.lastName);
+let books = [{
+    title: "The Begging After the End",
+    author: {
+        firstName: "Arthur",
+        lastName: "Leywin"}},
+             {
+    title: "That Time I Got Reincarnated As a Chew Toy",
+    author: {
+        firstName: "Fuse",
+        lastName: "Tempest"}},
+             {
+    title: "The King of the Fries",
+    author: {
+        firstName: "Jr Roger",
+        lastName: "Tolkien"}},
+             {
+    title: "The Tiger, The Warlock, and The Nightstand",
+    author: {
+        firstName: "Charlie Sheen",
+        lastName: "Lewis"}},
+             {
+    title: "Boys are from Jupiter, Gilrs are from College, Dogs are from Neptune",
+    author: {
+        firstName: "Jean",
+        lastName: "Donaldson"}},
+             {
+    title: "The Totaly Real Book Writen by Jim Carry",
+    author: {
+        firstName: "Ryan", 
+        lastName: "Renoldds"}},
+             {
+    title: "Morgan Freeman Autobiography",
+    author: {
+        firstName: "Kevin",
+        lastName: "Hart"}},
+             {
+    title: "Dawn",
+    author: {
+        firstName: "Scott", 
+        lastName: "Curtis"}},
+             {   
+    title: "I'm Running to work because I can't afford gas",
+    author: {
+        firstName: "Gas",
+        lastName: "Prices"}},
+             { 
+    title: "Harry Potter",
+    author: {
+        firstName: "J.K.",
+        lastName: "Rowling"}}
+];
+    console.log(books[2].title)
+    console.log(books[0].author.lastName);
+    console.log(books[4].author.lastName);
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -145,7 +145,7 @@
      */
 
      books.forEach(function(book, i){
-    console.log("Book # " + (i + 1) + ": " + books[i].title + "\n" + books[i].title + " written by " + books[i].author.firstName + " " + books[i].author.lastName);  
+    console.log(`Book # ${(i + 1)} : ${books[i].title} ${"\n"} ${books[i].title} written by ${books[i].author.firstName} ${books[i].author.lastName}`);  
      });
 
     /*
@@ -181,4 +181,22 @@
     //     console.log(books.title + books.author.firstName + books.author.lastName);
     // }
     // createBook(iTitle,iFirstName,iLastName);
-        })();
+
+  
+  function createBook(title, author) {
+    return // something that matches the books in the original array
+  }
+  
+  function showBookInfo(bookObj) {
+   return bookObj.title + "\n" + bookObj.title + " written by " + bookObj.author.firstName + " " + bookObj.author.lastName;
+  }
+  
+  var book = [
+    createBook("One", "A B"),
+    createBook("Two", "C D")
+  ];
+  
+  books.forEach(function(bookObj, index) {
+    console.log(`Book #${index}: ${showBookInfo(bookObj)}`)
+})
+})();
