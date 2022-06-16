@@ -8,25 +8,27 @@
 <body>
 <h2 id="message">This BOM will self destruct in <span id="timer">5</span> seconds...</h2>
 <button id="defuser">Defuse the BOM</button>
-
+<audio src="audio/Bomb has been defused - CS_GO Sound Effect.mp3" id="defused"></audio>
 <script>
 (function() {
     "use strict";
     var detonationTimer = 5;
     // TODO: This function needs to be called once every second
-    function updateTimer() {
+    let newFile = '<h1>Explosion</h1> <audio autoplay src="audio/Megumin Explosion Sound Clip.mp3" ></audio> ';
+   let myInterval =  setInterval(function updateTimer() {
         if (detonationTimer == 0) {
-            alert('EXTERMINATE!');
-            document.body.innerHTML = '';
+            document.body.innerHTML = newFile;
         } else if (detonationTimer > 0) {
             document.getElementById('timer').innerHTML = detonationTimer;
         }
         detonationTimer--;
-    }
+    }, 1000);
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
     function defuseTheBOM() {
-
+        clearInterval(myInterval)
+        var noBoom = document.getElementById("defused");
+        noBoom.play();
     }
     // Don't modify anything below this line!
     //
