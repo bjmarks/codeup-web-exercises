@@ -1,9 +1,9 @@
 # codeup-web-exercises
 ##
-## Part One of HTML exercies Complete
-### Waiting for CSS & JAVASCRIPT files to be added.
-## Part Two of HTML exercise Complete
-### Waiting for CSS & JAVASCRIPT to be added.
-## HTML From added, couldn't send email.
-### Waiting for CSS & JAVASCRIPT to be added.
-## JAVASCRIPT added Under constuction.
+## HTML & CSS fo;ders added
+### html part one folder moved to HTML & CSS folder
+### html part two folder moved to HTML & CSS folder
+### html form folder moved to HTML & CSS folder
+#### HTML From added, couldn't send email.
+## JAVASCRIPT folder added.
+## JAVASCRIPT 1 added & in Under constuction.

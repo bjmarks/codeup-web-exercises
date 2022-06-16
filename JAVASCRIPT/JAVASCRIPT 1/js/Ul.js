@@ -5,8 +5,6 @@ function ulist() {
         "Intenal_js",
         "functions_js",
         "conditionals",
-        "Ten FUNCTIONS Excersice",
-        "Intro to Testing",
         "loops",
         "iterating_arrays_js",
         "planets-js",
