@@ -17,9 +17,23 @@
                 <label for="password" class="form-label">Password</label>
                 <input type="password" id="password" name="password" class="form-control">
             </div>
-            <button class="btn btn-block">Login</button>
+            <button id="animate" class="btn btn-block">Login</button>
         </fieldset>
     </form>
 </main>
+<script>
+    const vfx = document.getElementById("animate");
+    vfx.document.addEventListener("click", portal);
+    function portal(){
+        const fx = document.createElement('audio');
+        fx.src = "Rick and Morty Portal Gun Sound Effect.mp3";
+        fx.play();
+        styleAnimate();
+    }
+    function styleAnimate(){
+        console.log("running");
+        document.getElementById("animate").style.backgroundImage = "url('portal.gif')";
+    }
+</script>
 </body>
 </html>
