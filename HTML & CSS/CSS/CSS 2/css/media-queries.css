@@ -1,0 +1,255 @@
+@media only screen and (max-width: 575px) {
+    body {
+      background-color: lightblue;
+    }
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }      
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }    
+    .fa-youtube {
+        background: #bb0000;
+        color: white;
+    }     
+    .fa {
+        padding: 5px;
+        font-size: 7px;
+        width: 13px;
+        text-align: center;
+        text-decoration: none;
+        border: #3B5998 solid 1px;
+        border-radius: 3px;
+    }
+    .nav-links {
+        margin: auto;
+        align-self: center;
+    }
+    .nav-links li {
+        list-style: none;
+        float: left;
+        padding: 5px;
+        margin: auto;
+        text-align: center;
+    }
+    .nav-links::after{
+        clear: both;
+    }
+    img{
+        width: 70%;
+    }
+  }
+/* Small devices (phones and pocket devices, 576 and up) */
+@media screen and (min-width:576px) { 
+    .alert-info {
+        color: rebeccapurple;
+    }
+    .hidden-on-desktop {
+        color: rebeccapurple;
+    }
+    .nav-links {
+        color: rebeccapurple;
+    }
+    .header-img {
+        color: rebeccapurple;
+    }
+    .main {
+        color: rebeccapurple;
+    }
+    #main {
+        color: rebeccapurple;
+    }
+    .sub-section {
+        color: rebeccapurple;
+    }
+    #social-media-links {
+        color: rebeccapurple;
+    }
+    .fa {
+        padding: 10px;
+        font-size: 15px;
+        width: 25px;
+        text-align: center;
+        text-decoration: none;
+        margin: 2px 1px;
+    }      
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }      
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }    
+    .fa-youtube {
+        background: #bb0000;
+        color: white;
+    }
+    img{
+        width: 60%;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width:768px) {
+    .alert-info {
+        color: red;
+    }
+    .hidden-on-desktop {
+        color: red;
+    }
+    .nav-links {
+        color: red;
+    }
+    .header-img {
+        color: red;
+    }
+    .main {
+        color: red;
+    }
+    #main {
+        color: red;
+    }
+    .sub-section {
+        color: red;
+    }
+    #social-media-links {
+        color: red;
+    }
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+    }      
+    .fa:hover {
+        opacity: 0.7;
+    }
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }      
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }    
+    .fa-youtube {
+        background: #bb0000;
+        color: white;
+    }
+    img{
+        width: 70%;
+    }
+}
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width:992px) {
+    .alert-info {
+        color: olive;
+    }
+    .hidden-on-desktop {
+        color: olive;
+    }
+    .nav-links {
+        color: olive;
+    }
+    .header-img {
+        color: olive;
+    }
+    .main {
+        color: olive;
+    }
+    #main {
+        color: olive;
+    }
+    .sub-section {
+        color: olive;
+    }
+    #social-media-links {
+        color: olive;
+    }
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+    }      
+    .fa:hover {
+        opacity: 0.7;
+    }
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }      
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }    
+    .fa-youtube {
+        background: #bb0000;
+        color: white;
+    }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width:1200px){
+    .alert-info {
+        color: cadetblue;
+    }
+    .hidden-on-desktop {
+        color: cadetblue;
+    }
+    .nav-links {
+        color: cadetblue;
+    }
+    .header-img {
+        color: cadetblue;
+    }
+    .main {
+        color: cadetblue;
+    }
+    #main {
+        color: cadetblue;
+    }
+    .sub-section {
+        color: cadetblue;
+    }
+    #social-media-links {
+        color: cadetblue;
+    }
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+    }      
+    .fa:hover {
+        opacity: 0.7;
+    }
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }      
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }    
+    .fa-youtube {
+        background: #bb0000;
+        color: white;
+    }     
+}
+
+@media print {
+    *{
+        background-color: white;
+    }
+    body {
+      color: black; 
+    }
+  }
