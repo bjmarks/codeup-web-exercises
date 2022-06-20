@@ -180,23 +180,24 @@ let books = [{
     // function showBookInfo(books) {
     //     console.log(books.title + books.author.firstName + books.author.lastName);
     // }
-    // createBook(iTitle,iFirstName,iLastName);
-
-  
+    // createBook(iTitle,iFirstName,iLastName);  
   function createBook(title, author) {
-    return // something that matches the books in the original array
+    let object = { title: title };
+    let arr1 = author.split(" ");
+    object["author"] = {
+        firstName: arr1[0] ,
+        lastName: arr1[1]
+    };
+    return object;
   }
-  
   function showBookInfo(bookObj) {
    return bookObj.title + "\n" + bookObj.title + " written by " + bookObj.author.firstName + " " + bookObj.author.lastName;
   }
-  
-  var book = [
+  var library = [
     createBook("One", "A B"),
     createBook("Two", "C D")
   ];
-  
-  books.forEach(function(bookObj, index) {
+  library.forEach(function(bookObj, index) {
     console.log(`Book #${index}: ${showBookInfo(bookObj)}`)
 })
 })();
