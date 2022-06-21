@@ -1,0 +1,13 @@
+.ja {
+    height: 600px;
+    background-image: url(../img/bigPizza.jpg);
+    background-position: bottom;
+    text-align: center;
+    margin: 0%;
+}
+.ja h1 {
+    background-color: rgba(255,255,255,0.4);
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+}
