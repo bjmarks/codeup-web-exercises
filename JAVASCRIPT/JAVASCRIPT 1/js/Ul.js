@@ -1,8 +1,8 @@
 function ulist() {
     var jsList = [
         "JsExercise1",
-        "External_js",
-        "Intenal_js",
+        "external_js",
+        "inline_js",
         "functions_js",
         "conditionals",
         "loops",
