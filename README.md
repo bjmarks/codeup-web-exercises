@@ -5,5 +5,8 @@
 ### html part two folder moved to HTML & CSS folder
 ### html form folder moved to HTML & CSS folder
 #### HTML From added, couldn't send email.
-## JAVASCRIPT folder added.
-## JAVASCRIPT 1 added & in Under constuction.
+### CSS 1 folder added
+### CSS 2 folder added
+## JAVASCRIPT folder added
+## JAVASCRIPT 1 added
+## JAVASCRIPT 2 added
