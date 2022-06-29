@@ -26,20 +26,22 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 <div id="cont">
-<button onclick="func1()">Run Function 1</button>
-<button onclick="func2()">Run Function 2</button>
-<button onclick="func3()">Run Function 3</button>
-<button onclick="func4()">Run Function 4</button>
-<button onclick="func5()">Run Function 5</button>
+<button id="eFunc1">Run Function 1</button>
+<!-- onclick="func1()" -->
+<button onclick="func2()" id="eFunc2">Run Function 2</button>
+<button onclick="func3()" id="eFunc3">Run Function 3</button>
+<button onclick="func4()" id="eFunc4">Run Function 4</button>
+<button onclick="func5()" id="eFunc5">Run Function 5</button>
 </div>
 <script>
     "use strict";
-    function func1(){
+    let event1 = document.getElementById('eFunc1');
+        event1.addEventListener('click', function(){
         // TODO: Uncomment next line and get the main header element by id
          var mainHeader = document.getElementById("main-header");
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
         mainHeader.innerHTML = "JavaScript is Cool";
-    }
+    });
     function func2(){
         // TODO: Uncomment the next line and get the sub header element by id
          var subHeader = document.getElementById("sub-header");
