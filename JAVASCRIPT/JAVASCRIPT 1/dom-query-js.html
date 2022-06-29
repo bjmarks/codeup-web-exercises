@@ -30,6 +30,7 @@
 <button onclick="func2()">Run Function 2</button>
 <button onclick="func3()">Run Function 3</button>
 <button onclick="func4()">Run Function 4</button>
+<button onclick="func5()">Run Function 5</button>
 </div>
 <script>
     "use strict";
@@ -74,9 +75,9 @@
     }
     function func5(){
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName("sub-paragraph");
+        let subParagraphs = document.getElementsByClassName("sub-paragraph");
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs['innerHTML'] = "Mission Accomplished";
+        subParagraphs[0].innerHTML = "Mission Accomplished";
     }
 </script>
 <script src="js/Ul.js"></script>
