@@ -14,10 +14,13 @@
         var detonationTimer = 5;
         let myInterval =  setInterval(function updateTimer() { // TODO: This function needs to be called once every second
         if (detonationTimer == 0) {
-            document.body.innerHTML = '<h1>Explosion</h1>';
-            const fx = document.createElement('audio');
-            fx.src = "audio/Megumin_Explosion_Sound_Clip.mp3";
-                fx.play();
+            // const fx = document.createElement('audio');
+            // fx.src = "audio/Megumin_Explosion_Sound_Clip.mp3";
+            // const videoP = '<video autoplay src="audio/KonoSuba Megumin Explosion!.mp4"></video>';
+            // document.body.innerHTML = '<h1 style="text-align: center;">Explosion</h1>' + videoP;
+            //     console.log("should be playing audio");
+            //     fx.play();
+            window.location.assign("explotion-bom.html")
         } else if (detonationTimer > 0) {
             document.getElementById('timer').innerHTML = detonationTimer;
         }
