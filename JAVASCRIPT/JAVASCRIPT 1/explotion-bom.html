@@ -18,7 +18,16 @@
         vid.play();
         let audio = document.getElementById('mp3');
         audio.muted = false;
-        audio.play();
+        var meguminTimer = 9;
+        let myInterval =  setInterval(function updateTimer() {
+        if (meguminTimer == 0) {
+            audio.play()
+        } else if (meguminTimer > 0) {
+            console.log(meguminTimer);
+        }
+        meguminTimer--;
+    }, 1000);
+        // audio.play()
 
 </script>
 </body>
