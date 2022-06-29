@@ -13,10 +13,10 @@ function ulist() {
         "math-js",
         "defuse-the-bom"
         ];
-        var start = "<ul>";
+        var start = "<nav> <ul>";
     for(let i = 0; i <= jsList.length - 1; i++){
         start = start + "<li>" + '<a href="'+jsList[i]+ '.html">' + jsList[i] + '</a>' + "</li>";    
     }
-        document.write(start + "</ul>");
+        document.write(start + "</ul> </nav>");
     }
     ulist();

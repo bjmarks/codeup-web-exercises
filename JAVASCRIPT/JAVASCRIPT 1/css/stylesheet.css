@@ -4,18 +4,21 @@ html{
 *{
     color: rgba(255, 0, 127, 1);
 }
-ul{
+nav ul{
     list-style: none;
     color: white;
     background-color: cadetblue;
     overflow-x: scroll;
 }
-li{
+nav ul li{
     float: left;
     padding: 0px;
     border-spacing: 0px;
     margin: 15px;
     border-bottom: solid 3px #6bb601;
+}
+ul {
+    list-style: none;
 }
 a{
     text-decoration: none;
