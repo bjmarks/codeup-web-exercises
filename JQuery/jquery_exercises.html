@@ -7,10 +7,83 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="main" class="div-main">
+    <h1 id="hw" class="h-w">HELLO WORLD</h1>
+    <p id="para" class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque itaque ducimus nihil hic recusandae sequi, aliquid sapiente iusto vitae totam sint quasi repellendus, numquam architecto adipisci minima eos accusantium beatae.</p>
+    <ul id="nav" class="navbar">
+        <li id="li1" class="navlinks">list 1</li>
+        <li id="li2" class="navlinks">list 2</li>
+        <li id="li3" class="navlinks">list 3</li>
+    </ul>
+    </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script>
         window.onload = function() {
         alert( 'The page has finished loading!' );
-    }</script>
+    }
+    let main = $("#main");
+    alert(main);
+    let hW = $("#hw");
+    let p = $("#para");
+    let nav = $('#nav');
+    let list1 = $("#li1");
+    let list2 = $("#li2");
+    let list3 = $("#li3");
+    </script>   
 </body>
 </html>
+
+<!-- 
+Class Selectors
+Remove your custom jQuery code from previous exercises.
+Update your code so that at least 3 different elements have the same class named codeup.
+Using jQuery, create a border around all elements with the class codeup that is 1 pixel wide and red.
+Remove the class from one of the elements. Refresh and test that the border has been removed.
+Give another element an id of codeup. Does this element get a border now?
+Element Selectors
+Remove your custom jQuery code from previous exercises.
+Using jQuery, set the font-size of all li elements to 20px.
+Craft selectors that highlight all the h1, p, and li elements.
+Create a jQuery statement to alert the contents of your h1 element(s).
+Multiple Selectors Combine your selectors that highlight all the h1, p, and li elements. 
+
+
+
+
+Use the file jquery_exercises.html for these exercises. Commit your changes to GitHub.
+Remove your custom jQuery code from previous exercises.
+Add jQuery code that will change the background color of an h1 element when clicked.
+Make all paragraphs have a font size of 18px when they are double clicked.
+Set all li text color to red when the mouse is hovering; reset to black when it is not.
+
+
+
+
+Create a new file named jquery_faq.html. Commit all changes to GitHub.
+In a HTML structure, create a definition list containing 10 FAQs about national parks.
+Add a class to all dd elements named invisible.
+Create some CSS rules that sets elements with the invisible class to visibility: hidden;.
+Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.
+Bonus
+When any of the dt elements is clicked, the element that was clicked should be highlighted.
+
+
+
+
+
+
+Exercises
+Open the file named jquery_faq.html for editing. Commit all changes to GitHub.
+Under the FAQ, add 3 unordered lists like above. Each list should contain a national park name in an h3 element, and a ul of 4 facts about the park.
+Create a button that, when clicked, makes the last li in each ul have a yellow background.
+When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+When any list item is clicked, first li of the parent ul should have a font color of blue.
+Bonus
+Create 3 divs that each look like a picture frame. Each one should have a unique background image and a button underneath that swaps the image from the frame.
+Use the traversing functions of jQuery to accomplish this. The rules are the following:
+The left frame swaps to the right and takes the image from the frame in the center.
+The center frame swaps randomly to either the left or right.
+The right frame swaps to the left and takes the image from the frame in the center.
+
+
+-->
