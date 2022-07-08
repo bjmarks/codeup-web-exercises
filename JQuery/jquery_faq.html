@@ -1,28 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parks</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .green {
+            background-color: green;
+        }
+        .blueText {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<h1>National Parks FAQ</h1>
+<ul id="ulParent">
+    <li>
+        <h3>yossemite</h3>
+        <ul>
+            <li>fun fact 1:</li>
+            <li>fun fact 2:</li>
+            <li>fun fact 3:</li>
+            <li>fun fact 4:</li>
+        </ul>
+    </li>
+    <li>
+        <h3>yellowstone</h3>
+        <ul>
+            <li>fun fact 1:</li>
+            <li>fun fact 2:</li>
+            <li>fun fact 3:</li>
+            <li>fun fact 4:</li>
+        </ul>
+    </li>
+        <li><h3>catalina</h3>
+        <ul>
+            <li>fun fact 1:</li>
+            <li>fun fact 2:</li>
+            <li>fun fact 3:</li>
+            <li>fun fact 4:</li>
+        </ul>
+    </li>
+</ul>
+<dl>
+    <dt>How many people visit the national parks?</dt>
+    <dd class="invisible">Total recreation visitors to the national parks in 2018: 318,211,833.</dd>
 
+    <dt>How old is the National Park System?</dt>
+    <dd class="invisible">The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916.</dd>
 
-Create a new file named jquery_faq.html. Commit all changes to GitHub.
-In a HTML structure, create a definition list containing 10 FAQs about national parks.
-Add a class to all dd elements named invisible.
-Create some CSS rules that sets elements with the invisible class to visibility: hidden;.
-Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.
-Bonus
-When any of the dt elements is clicked, the element that was clicked should be highlighted.
+    <dt>How many employees are in the National Park Service?</dt>
+    <dd class="invisible">Permanent, temporary, and seasonal employees: More than 20,000</dd>
 
+    <dt>What is the origin of the National Park Service arrowhead?</dt>
+    <dd class="invisible">The arrowhead was authorized as the official National Park Service emblem by the Secretary of the Interior on July 20, 1951.</dd>
 
+    <dt>How many areas are in the National Park System?</dt>
+    <dd class="invisible">The system includes 419 areas covering more than 85 million acres in every state, the District of Columbia, American Samoa, Guam, Puerto Rico, and the Virgin Islands.</dd>
 
+    <dt>What is the largest national park site?</dt>
+    <dd class="invisible">Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres.</dd>
 
+    <dt>What is the National Park Service budget?</dt>
+    <dd class="invisible">Fiscal Year (FY) 2014 Enacted: $2.98 billion.</dd>
 
+    <dt>Can I bring my pet to a national park?</dt>
+    <dd class="invisible">Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging facilities.</dd>
 
-Exercises
-Open the file named jquery_faq.html for editing. Commit all changes to GitHub.
-Under the FAQ, add 3 unordered lists like above. Each list should contain a national park name in an h3 element, and a ul of 4 facts about the park.
-Create a button that, when clicked, makes the last li in each ul have a yellow background.
-When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
-When any list item is clicked, first li of the parent ul should have a font color of blue.
-Bonus
-Create 3 divs that each look like a picture frame. Each one should have a unique background image and a button underneath that swaps the image from the frame.
-Use the traversing functions of jQuery to accomplish this. The rules are the following:
-The left frame swaps to the right and takes the image from the frame in the center.
-The center frame swaps randomly to either the left or right.
-The right frame swaps to the left and takes the image from the frame in the center.
+    <dt>How do I apply for a job with the National Park Service?</dt>
+    <dd class="invisible">National Park Service jobs, including both permanent and seasonal positions, are listed on USAJOBs.</dd>
 
+    <dt>What do I need to know about driving off road in national parks?</dt>
+    <dd class="invisible">Before you head out, check with the national parks that you intend to visit. In many national parks, off-road driving is illegal. Where off-road driving is allowed, the National Park Service regulates it.</dd>
+</dl>
+<button id="ylw">make yellow</button>
+<button id="show">show dd</button>
+<script>    
+let dd = document.querySelectorAll(".invisible");
+let dt = document.querySelectorAll("dt");
+let ulParent = document.getElementById('ulParent');
+let btn = document.getElementById("ylw").addEventListener("click", yellBG);
+let heading0 = ulParent.children[0].firstElementChild.addEventListener("click", bold);
+let heading1 = ulParent.children[1].firstElementChild.addEventListener("click", bold);
+let heading2 = ulParent.children[2].firstElementChild.addEventListener("click", bold);
+let li = function list(a) {
+    for (let i = 0; i < ulParent.children.length; i++){
+        let ulChild = ulParent.children[i].lastElementChild.children;
+        for (let j = 0; j < ulChild.length; j++){
+           let liGrandChild = ulChild[j];
+           liGrandChild.addEventListener("click", function () {
+                ulChild[0].classList.toggle("blueText");
+                console.log("Clicked");
+           })
+        }   
+    }
+}();
+document.getElementById("show").addEventListener("click" , () => {
+    for (let i = 0; i < dd.length; i++) {
+        const element = dd[i];
+        console.log('log' + i); 
+        element.classList.toggle("invisible");   
+    }
+});
+dt.forEach(function (t) {
+    t.addEventListener("click", function (e) {
+        this.classList.toggle("green");
+    })    
+})
+function yellBG() {
+    console.log("clicked");
+    for(let i = 0; i < ulParent.children.length; i++){
+    ulParent.children[i].lastElementChild.lastElementChild.classList.toggle("yellow");
+    }
+}
+function bold(){
+    console.log("clicked");
+        this.nextElementSibling.style.fontWeight = "bold";
+        this.nextElementSibling.style.color = "blue";
+}
+</script>
+</body>
+</html>
