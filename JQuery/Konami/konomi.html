@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="assests/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="test.js" defer></script>
+    <title>Document</title>
+    <style>
+    @keyframes godMode {
+        from   {
+                background: linear-gradient(0deg, black 50%, white 50%);
+            }
+         /* {
+                background: linear-gradient(45deg, white 50%, black 50%);
+            }
+         {
+                background: linear-gradient(90deg, black 50%, white 50%);
+        }
+        {
+                background: linear-gradient(180deg, white 50%, black 50%);
+        }
+        {
+                background: linear-gradient(225deg, black 50%, white 50%);
+            }
+        { 
+                background: linear-gradient(270deg, white 50%, black 50%);
+            }
+        {
+                background: linear-gradient(315deg, black 50%, white 50%);
+        } */
+        to {
+                background: linear-gradient(0deg,white 50%, black 50%);
+        }
+    }
+    </style>
+</head>
+<body>
+    <audio id="song" hidden></audio>
+    <div id="space"></div>
+    <div id="myBox"><h1>Move me with arrow&nbsp;keys</h1></div>
+    <script>
+        const cheatCode = "ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,b,a,Enter";
+        const sercret = "v,e,n,u,s,Enter";
+        const body = document.querySelector("body");
+        const sound = document.getElementById("song");
+        const box = document.getElementById('myBox');
+        body.addEventListener("keydown", checkCode);
+        //body.addEventListener("keypress", function(e){console.log("Key "+ e.key + " pressed");})
+        let sequence = [];
+    function checkCode(e) {
+        const log = e.key;
+        sequence.push(log);
+        
+        let seq = sequence.toString();
+            if(seq.includes(cheatCode)){
+                box.innerHTML = `<h1>なに,</h1><h6>you know about God mode?</h6><button onclick="reload()">Return?</button>`
+                sound.src = "assests/KonamiCode.mp3";
+                sound.play();
+                sound.playbackRate = 2
+                body.style.animation = "godMode 1s 4";  
+                console.log("sound should play");
+                sequence =  [];
+
+            }
+            else if(seq.includes(sercret)){
+                box.innerHTML = `<h3>Its dangerous to go in alone, take this</h3><button onclick="reload()">Return?</button>`
+                sound.src = "assests/Doctor.mp3";
+                sound.currentTime = 100;
+                sound.play();
+                sound.playbackRate = 4;
+                console.log("sound should play");
+                sequence =  [];
+            }
+            else{
+                console.log(seq);
+            }
+    }
+    function reload(){
+        location.reload();
+    }
+    </script>
+</body>
+</html>

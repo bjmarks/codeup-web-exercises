@@ -1,0 +1,22 @@
+body {
+    max-height: 100vh;
+    min-height: 100vh;
+    background-color: wheat;
+    overflow: hidden;
+}
+#space {
+    height: 40vh;
+}
+#myBox {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    margin: auto;
+    background-color: cornflowerblue;
+}
+h1{
+    margin-top: auto;
+    margin-bottom: auto;
+}
