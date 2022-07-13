@@ -28,11 +28,7 @@ const users = [
 const name = 'benjamin marks';
 const email = 'bjmarks13@yhaoo.com';
 const languages = ['html','css','javascript', 'php', 'sql', 'bash', 'python'];
-users.push({
-  name: name,
-  email: email,
-  languages: languages
-});
+users.push({ name, email,languages});
 console.log(users);
 let emails = [];
 let names = [];
