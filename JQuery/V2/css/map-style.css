@@ -1,0 +1,61 @@
+body {
+    background-color:cadetblue;
+}
+#grid-container {
+    display: grid;
+    grid-template-areas:
+        "title title title"
+        "map map map"
+        "map map map"
+        "btns btns btns";
+        justify-content: space-evenly;
+}
+#title {
+    grid-area: title;
+}
+#map {
+    grid-area: map;
+    min-width: 50vw;
+    height: 70vh;
+    border-radius: 10px;
+    background-color: white;
+    margin: 10px auto;
+
+}
+button {
+    background: radial-gradient(lightgreen 40%, forestgreen 60%);
+    font-size: 2em;
+    opacity: .8;
+    border-radius: 0%;
+    border: none;
+   
+}
+button:hover {
+    opacity: 1;
+    border-radius: 50%;
+    transition: 1s;
+}
+#buttons{
+    grid-area: btns;
+    width: 40vw;
+    margin: auto;
+}
+#zoom-in{
+    height: 4em;
+    width: 4em;
+    margin: 16px;
+}
+#zoom-out{
+    height: 4em;
+    width: 4em;
+    margin: 16px;
+}
+#drop-marker {
+    height: 4em;
+    width: 4em;
+    margin: 16px;
+}
+#popup {
+    font-size: 1em;
+    color: hotpink;
+}
