@@ -1,0 +1,12 @@
+.invisible {
+    visibility: hidden;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.blueText {
+    color: blue;
+}
