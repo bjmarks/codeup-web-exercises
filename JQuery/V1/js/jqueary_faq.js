@@ -1,42 +1,11 @@
-let dd = document.querySelectorAll(".invisible");
-let dt = document.querySelectorAll("dt");
-let ulParent = document.getElementById('ulParent');
-let btn = document.getElementById("ylw").addEventListener("click", yellBG);
-let heading0 = ulParent.children[0].firstElementChild.addEventListener("click", bold);
-let heading1 = ulParent.children[1].firstElementChild.addEventListener("click", bold);
-let heading2 = ulParent.children[2].firstElementChild.addEventListener("click", bold);
-let li = function list(a) {
-    for (let i = 0; i < ulParent.children.length; i++){
-        let ulChild = ulParent.children[i].lastElementChild.children;
-        for (let j = 0; j < ulChild.length; j++){
-           let liGrandChild = ulChild[j];
-           liGrandChild.addEventListener("click", function () {
-                ulChild[0].classList.toggle("blueText");
-                console.log("Clicked");
-           })
-        }   
-    }
-}();
-document.getElementById("show").addEventListener("click" , () => {
-    for (let i = 0; i < dd.length; i++) {
-        const element = dd[i];
-        console.log('log' + i); 
-        element.classList.toggle("invisible");   
-    }
-});
-dt.forEach(function (t) {
-    t.addEventListener("click", function (e) {
-        this.classList.toggle("green");
-    })    
-})
-function yellBG() {
-    console.log("clicked");
-    for(let i = 0; i < ulParent.children.length; i++){
-    ulParent.children[i].lastElementChild.lastElementChild.classList.toggle("yellow");
-    }
-}
-function bold(){
-    console.log("clicked");
-        this.nextElementSibling.style.fontWeight = "bold";
-        this.nextElementSibling.style.color = "blue";
-}
+$("#show").click(function () {$("dd").toggleClass("invisible")});
+$("#ylw").click(function () {$("dt").toggleClass("yellow")});
+$("#liHighlihgt").click(function () {$("#ulParent").children().each(function () {$(this).children().last().children().last().toggleClass("yellow");})});
+$("h3").click(function (){$(this).next().toggleClass("bold")});
+$("#ulParent").children().children().click(function() {$(this).children().first().toggleClass("blueText")});
+// Bonus
+// Create 3 divs that each look like a picture frame. Each one should have a unique background image and a button underneath that swaps the image from the frame. Use the traversing functions of jQuery to accomplish this.
+// The rules are the following:
+// The left frame swaps to the right and takes the image from the frame in the center.
+// The center frame swaps randomly to either the left or right.
+// The right frame swaps to the left and takes the image from the frame in the center.
