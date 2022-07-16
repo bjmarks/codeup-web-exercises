@@ -19,17 +19,13 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(alert( 'The page has finished loading!' ));
-    let main = $("#main");
-    let hW = $("#hw");
-    let p = $("#para");
-    let nav = $('#nav');
     let listIds = $("#li1, #li2, #li3");
     let lists = $(".codeup");
     let highlights = $("h1, p, li");
     highlights.css('background-color', 'yellow');
     lists.css("border", "1px solid red");
     listIds. css('font-size', '20px');
-    alert(`h1 has ${hw}`);
+    alert(`h1 has ${$("#hw").html()}`);
     $("#hw").click(function sty() {
         console.log("click");
         $(this).css('background-color','blue')

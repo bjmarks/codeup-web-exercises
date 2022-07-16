@@ -1,5 +1,5 @@
 $("#show").click(function () {$("dd").toggleClass("invisible")});
-$("#ylw").click(function () {$("dt").toggleClass("yellow")});
+$("dt").click(function () {$(this).toggleClass("green")});
 $("#liHighlihgt").click(function () {$("#ulParent").children().each(function () {$(this).children().last().children().last().toggleClass("yellow");})});
 $("h3").click(function (){$(this).next().toggleClass("bold")});
 $("#ulParent").children().children().click(function() {$(this).children().first().toggleClass("blueText")});
