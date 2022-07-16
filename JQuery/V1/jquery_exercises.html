@@ -32,12 +32,19 @@
     alert(`h1 has ${hw}`);
     $("#hw").click(function sty() {
         console.log("click");
-        $('hw').css('background-color','blue')});
-    p.css("font-size", "18");
+        $(this).css('background-color','blue')
+    });
+    $("#para").dblclick(function (){
+        console.log("click");
+        $(this).css("font-size", "18px");
+    })
+    $("#li1, #li2, #li3 ").hover(hov1, hov2)
+    function hov1 () {
+        $(this).css('color', 'red');
+    }
+    function hov2 () {
+        $(this).css('color', 'black');
+    }
     </script>   
 </body>
 </html>
-<!-- 
-Make all paragraphs have a font size of 18px when they are double clicked.
-Set all li text color to red when the mouse is hovering; reset to black when it is not.
--->
