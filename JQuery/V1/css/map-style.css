@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#map {
+    position: absolute;
+    top: 10vh;
+    bottom: 10vh;
+    width: 80%;
+    height: 700px;
+    border: 1px solid black;
+    /* background-color: rgba(180, 180, 180, 0.5); */
+    margin-left: 10%;
+}

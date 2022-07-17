@@ -4,69 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/map-style.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
     <title>Map Marker Example</title>
-    <style>
-        #map {
-            width: 100%;
-            height: 700px;
-        }
-    </style>
 </head>
 <body>
-
 <h1>My First Mapbox Map!</h1>
 <div id='map'></div>
-
-<!-- Mapbox JS -->
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-
-<!-- Mapbox Geocoder Util Methods -->
-<script src="mapbox-geocoder-utils.js"></script>
-
-<!-- Custom JS -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
-    let apiKey = AIzaSyDAezml678NTlUFHAjkAu5NzsFjCC4fQdc;
-    var accessToken = YOUR_ACCESS_TOKEN_HERE;
-
+    (async function() {
+    const accessToken ='pk.eyJ1IjoiYmptYXJrczEzIiwiYSI6ImNsNW1sa2VtejB1ZngzbG53NmFwNDRxbmcifQ.kC255Txl7bjL18qkAFIj6w';
     mapboxgl.accessToken = accessToken;
-
-    var map = new mapboxgl.Map({
+    const map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 10,
-        center: [29.4268932,-98.4897316]
+        style: 'mapbox://styles/bjmarks13/cl5oonlkd008n14l1q9u9d1tv',
+        zoom: 13,
+        center: [-98.4846, 29.4252]
     });
-    var alamoInfo = {
-        address: "The Alamo",
-        popupHTML: "<p>Remember the Alamo!</p>"
-    };
-    function placeMarkerAndPopup(info, token, map) {
-        geocode(info.address, token).then(function(coordinates) {
-            var popup = new mapboxgl.Popup()
-                .setHTML(info.popupHTML);
-            var marker = new mapboxgl.Marker()
-                .setLngLat(coordinates)
-                .addTo(map)
-                .setPopup(popup);
-            popup.addTo(map);
-        });
-    }
-    placeMarkerAndPopup(alamoInfo, accessToken, map);
-    cadd7414678dc53d
-    // function getLatLangFromAddress (address, token = MAPBOX_API_KEY) {
-    //     const url = "";
-    //     fetch(url + encodeURIComponent(address) + '.json' + "?" + 'access token='
-    //     .then(async function))
-    // }
+//     let codeupInfo = {
+//         address: "codeup",
+//         popupHTML: "<p>learn from here</p>"
+//     };
+//     function placeMarkerAndPopup(info, token, map) {
+//         geocode(info.address, token).then(function(coordinates) {
+//             var popup = new mapboxgl.Popup()
+//                 .setHTML(info.popupHTML);
+//             var marker = new mapboxgl.Marker()
+//                 .setLngLat(coordinates)
+//                 .addTo(map)
+//                 .setPopup(popup);
+//             popup.addTo(map);
+//         });
+//     }
+//     placeMarkerAndPopup(codeupInfo, accessToken, map);
+
+// function getLatLngFromAddress(address, token = accessToken) {
+//         const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
+//         return fetch(`${url}${encodeURIComponent(address)}.json?access_token=${token}`)
+//             .then(async function(res) {
+//                 const data = await res.json();
+//                 return data.features[0].center;
+//             });
+//     }
+//     let coords = await getLatLngFromAddress("Friendswood, TX");
+//     console.log(coords);
+
+//     const friendswood = new mapboxgl.Marker();
+//     friendswood.setLngLat(coords);
+//     friendswood.addTo(map);
+
+//     const ribot = new mapboxgl.Marker();
+//     ribot.setLngLat([14.0473, 40.9343])
+//     ribot.addTo(map);
+
+//     // when the zoom in button is clicked, decrease the map's zoom level
+//     const zoomIn = document.querySelector("#zoom-in");
+//     zoomIn.addEventListener("click", function (event) {
+//         let currentZoom = map.getZoom();
+//         currentZoom++;
+//         map.setZoom(currentZoom);
+//     });
+
+//     const zoomOut = document.querySelector("#zoom-out");
+//     zoomOut.addEventListener("click", function (event) {
+//         let currentZoom = map.getZoom();
+//         currentZoom--;
+//         map.setZoom(currentZoom);
+//     });
+
+//     document.querySelector("#drop-marker").addEventListener("click", function (event) {
+//         let popup = new mapboxgl.Popup();
+//         popup.setLngLat(map.getCenter())
+//         popup.setHTML("<h3 id='popup'>Codeup Rocks!</h3>")
+
+//         let marker = new mapboxgl.Marker();
+
+//         marker.setPopup(popup);
+//         marker.setLngLat(map.getCenter());
+//         marker.addTo(map);
+
+//     });
+
+//     placeMarkerAndPopup(alamoInfo, accessToken, map);
+    })();
 </script>
 </body>
 </html>
 <!-- 
-    Exercises
-
+Exercises
 Please follow the instructions below. Remember to commit your changes after each step. At the end of the exercise, push your changes to GitHub.
-
 Generate a Mapbox API Key using the steps from above
 Create a new file named mapbox_maps_api.html and add a map using the next steps.
 Generate a map that shows the city with your favorite restaurant using geocoding.
@@ -76,7 +104,6 @@ Create a popup with the name of the restaurant.
 Make sure the info window does not display until the marker has been clicked on.
 Refactor your code to display at least three of your favorite restaurants with information about each. Create an array of objects with information about each restaurant to accomplish this. Use a .forEach() loop rather than a for loop.
 Bonuses (roughly in ascending order of challenge)
-
 Info windows can contain basic HTML, not just plain text. Add some additional information about your restaurant to the popup such as why it is your favorite, dishes you like, images, etc.
 Add a select input that allows the user to change the zoom level to 5, 15, or 20.
 Add a text box for the user to enter an address that will use geocoding to center the map and place a marker on that location.
