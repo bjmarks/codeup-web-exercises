@@ -1,0 +1,17 @@
+body {
+    margin: 0%;
+    padding: 0;
+    background-color: aquamarine;
+}
+.weather {
+    position: absolute;
+    top: 10vh;
+    bottom: 10vh;
+    height: calc(80% - 2px);
+    width: calc(100% - 2px);
+    background-color: white;
+    border: 1px solid black;
+}
+h1 {
+    justify-content: center;
+}
