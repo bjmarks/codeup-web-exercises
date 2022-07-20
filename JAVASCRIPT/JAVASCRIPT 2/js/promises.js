@@ -1,8 +1,10 @@
-// let token = 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;
-fetch(url, {headers: {'Authorization': token}})
+fetch(url, {headers: {'Authorization': token}}).then(response => response.json()).then(data => {
+    console.log(data);
+    let users = data;
+    return users;
+})
 
-
-
+wait(1000).then(() => console.log(users));
 // Create a function that accepts a GitHub username, and returns a promise that resolves returning just the date of the last commit that user made. Reference the github api documentation to achieve this.
 
 // Create Your Own Promise

@@ -1,5 +1,4 @@
 (async function() {
-    const accessToken = 'pk.eyJ1IjoiYmptYXJrczEzIiwiYSI6ImNsNW1sa2VtejB1ZngzbG53NmFwNDRxbmcifQ.kC255Txl7bjL18qkAFIj6w';
     mapboxgl.accessToken = accessToken;
     const map = new mapboxgl.Map({
         container: 'map',
