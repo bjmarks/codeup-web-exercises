@@ -20,6 +20,9 @@ search.addEventListener("click", () => {
                 <div class="commitsEmail">${data[i].payload.commits[0].author.email}</div>
                 <div class="commitsMessage">${data[i].payload.commits[0].message}</div>
                 </div>`;
+            }
+            else {
+                console.log("no Push Event found on the " + i + " iterantion")
             }}
          })
         // .catch();
