@@ -1,8 +1,6 @@
 const geo = document.getElementById("geo");
 const search = document.getElementById("search");
 // const submit = document.getElementById("submit");
-const token = 'pk.eyJ1IjoiYmptYXJrczEzIiwiYSI6ImNsNW1sa2VtejB1ZngzbG53NmFwNDRxbmcifQ.kC255Txl7bjL18qkAFIj6w';
-const api = "ca68c23ce9e123ebdbd9ff8fd767a92a";
 let lon = -98.491142;
 let lat = 45.424349;
 geo.addEventListener("click", function getCurrentLocation() {
