@@ -1,18 +1,38 @@
 # codeup-web-exercises
-FOLDERS
 ## Backgrounds
 - ### assests
     - Palm Trees.svg
     - Venus.webp
-- ### BGstyle.css
-- ### background.html
-- ### beach.html
+- BGstyle.css
+- background.html
+- beach.html
 ## HTML & CSS
 - ### CSS
     - #### CSS 1
+        - ### assets
+        - ### covor
+        - ### css
+        - ### flex-form
+        - ### fonts
+        - ### img
+        - css_selectors.html
+        - flex-form.html
+        - flexbox-cards.html
+        - flexbox-fundamentals-exercise.html
+        - flexbox-nav-exercise.html
+        - login-form.html
+        - messages.html
+        - twitter.html
     - #### CSS 2
+        - ### css
+        - ### img
+        - favicon.ico
+        - media-queries.html
+        - order-pizza.html
+        - resume.html
 - ### HTML
     - #### HTML form
+        - form.html
     - #### Port One
     - #### Part Two
 ## JAVASCRIPT
@@ -21,5 +41,4 @@ FOLDERS
 ## JQuery
 - ### V1
 - ### V2
-## FilesCheck
-- ### grading Period 2 Files
+
