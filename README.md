@@ -1,4 +1,3 @@
-# codeup-web-exercises
 # Backgrounds
 - # assests
 - BGstyle.css
