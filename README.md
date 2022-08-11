@@ -1,12 +1,25 @@
 # codeup-web-exercises
-##
-## HTML & CSS folders added
-### html part one folder moved to HTML & CSS folder
-### html part two folder moved to HTML & CSS folder
-### html form folder moved to HTML & CSS folder
-#### HTML From added, couldn't send email.
-### CSS 1 folder added
-### CSS 2 folder added
-## JAVASCRIPT folder added
-## JAVASCRIPT 1 added
-## JAVASCRIPT 2 added
+FOLDERS
+## Backgrounds
+- ## assests
+    - Palm Trees.svg
+    - Venus.webp
+- BGstyle.css
+- background.html
+- beach.html
+## HTML & CSS
+- ## CSS
+    - ## CSS 1
+    - ## CSS 2
+- ## HTML
+    - ## HTML form
+    - ## Port One
+    - ## Part Two
+## JAVASCRIPT
+- ## JAVASCRIPT 1
+- ## JAVASCRIPT 2
+## JQuery
+- ## V1
+- ## V2
+## FilesCheck
+- ### grading Period 2 Files
