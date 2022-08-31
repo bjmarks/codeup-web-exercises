@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+ <html>
+	<head>
+	 <meta charset="utf-8">
+	 <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <title>Hello world || Form Page</title>
+	 <style type="text/css"></style>
+	 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	 <!-- Benjamin Marks
+	 	 version 1.29 --> 
+	 </head>
+	<body>
+			<header class="header" id="top">
+				<h1>Hello&nbsp;World from&nbsp;San&nbsp;Antionio</h1>
+			</header>
+			<hr>
+			<nav id="tabs">
+				<ul id="links">
+					<li><a href="Java.html">Java Page</a></li>
+					<li><a href="css_intro.html">Css Page</a></li>
+					<li><a href="form.html" class="active">Form Page</a></li>
+					<li><a href="HWCU.html">Home Page</a></li>					
+				</ul>
+		 	 </nav>
+			<hr>
+		<!--
+ 			<form method="POST" action="http://request-inspector.glitch.me/">
+	   			 <div>
+    				<label for="username">Username</label>
+      		 		<input id="username" name="username" type="text">
+    			</div>
+    			<div>
+    		    	<label for="password">Password</label>
+    		    	<input id="password" name="password" type="password">
+		    	</div>
+		    	<div>
+  			      	<input type="submit">
+    			</div>
+			</form> 
+		 -->
+		<div class="corasel">
+			<span class="left" id="span">&#8592;</span>
+			<span class="right" id="span">&#8594;</span>
+			<br>
+			<div class="panel">
+				<h2>Login</h2>
+				<form method="POST" action="php/index.php" name="Log-in">
+					<p>
+						<label for="LI-username">Username</label>
+						<input type="text" id="LI-username" placeholder="Username" name="LI-username">
+					</p>
+					<p>
+						<label for="LI-password">Password</label>
+						<input type="password" id="LI-password" placeholder="Password" name="LI-password">
+					</p>
+					<p>
+						<button type="submit" onclick="alert('unable to login');" value="Login">Log-in</button>
+					</p>
+				 </form>
+			 </div>
+			<hr>
+			<div class="panel">
+				<h2>Sign-Up</h2>
+				<form method="POST" action="php/index.php" name="Sign-up">
+					<p>
+						<label>First Name <input type="text" name="firstname" placeholder="First Name"></label>
+						<br>
+						<label>Last Name <input type="text" name="lastname" placeholder="Last Name"></label>
+						<br>
+						<div>
+						<label for="adderess">Address</label>
+						<br>
+						<label for="street">Street</label>
+						<input type="text" name="street" placeholder="street">
+						<br>
+						<label for="city">City</label>
+						<input type="text" name="city" placeholder="city">
+						<br>
+						<label for="state">State</label>
+						<input type="text" name="state" placeholder="state">
+						<br>
+						<label for="zipcode">Zipcode</label>
+						<input type="text" name="zipcode" placeholder="zipcode">
+						</div>
+						<br>
+					</p>
+					<p>
+						<label>E-mail<input type="email" name="email" placeholder="E-mail"></label>
+						<label for="SU-username">Username</label>
+						<input type="text" id="SU-username" placeholder="Username" name="SU-username">
+						<br>
+						<label for="SU-password">Password</label>
+						<input type="password" id="SU-password" placeholder="Password" name="SU-password">
+						<label for="SU-passwordConfirm">Confirm Password</label>
+						<input type="password" id="SU-passwordConfirm" placeholder="Confirm Password" name="SU-passwordConfirm">
+						<br>
+						<input type="checkbox" name="mailing_list" id="mailing_list" value="yes" checked>
+						<label for="mailing_list"> Sign Up For Our Mailing List</label>
+						<button type="submit" value="Signup" onclick="alert('Unable to Sign-Up');">Sign-Up</button>
+					</p>
+				</form>
+			 </div>
+			<hr>
+			<div class="panel">
+				<h2>Compose A Message</h2>
+				<form method="POST" action="php/index.php" name="Message">
+					<p>
+						<b>Contact Us</b>
+						<br>
+						<label>E-mail To:<input type="email" readonly name="admin"value="Admin@gmail.com"></label>
+						<br>
+						<label>E-mail From:<input type="email" name="email" placeholder="E-mail"></label>
+						<br>
+						<label>Subject</label>
+						<input type="text" name="Subject" placeholder="Subject">
+						<br>
+						<label>Message Content:</label>
+						<br>
+						<textarea id="body" name="body" rows="5" cols="40" placeholder="Compose Message Contents Here"></textarea>
+					 </p>
+					<p>
+						<label for="Send&copy">Save a Copy?<input type="checkbox" checked ></label>	<!-- Add code to send a copy if checked -->
+						<br>
+						<button type="submit" value="Message" onclick="alert('Unable to Send Message')">Send</button>
+					 </p>
+				 </form>
+			 </div>
+			<hr>
+			<div class="panel">
+				<h2>Multiple Choice Test</h2>
+				<form method="POST" action="php/index.php" name="test">
+					<label for="Q1">1) HTML stands for?</label>
+					<br>
+					<label><input type="radio" name="html" value="false">HighText Machine Language</label>
+					<label><input type="radio" name="html" value="false">HyperText and links Markup Language</label>
+					<label><input type="radio" name="html" value="true">HyperText Markup Language</label>
+					<label><input type="radio" name="html" value="false">None of these</label>
+					<br>
+					<label for="Q2">2) The correct sequence of HTML tags for starting a webpage is?</label>
+					<br>
+					<label><input type="radio" name="sequence" value="false">Head, Title, HTML, body</label>
+					<label><input type="radio" name="sequence" value="false">HTML, Body, Title, Head</label>
+					<label><input type="radio" name="sequence" value="false">HTML, Head, Title, Body</label>
+					<label><input type="radio" name="sequence" value="true">HTML, Head, Title, Body</label>
+					<br>
+					<label for="Q3">3) Which of the following element is responsible for making the text bold in HTML?</label>
+					<br>
+					<label><input type="radio" name="bold" value="false"> &#60;pre&#62; </label>
+					<label><input type="radio" name="bold" value="false"> &#60;a&#62; </label>
+					<label><input type="radio" name="bold" value="true"> &#60;b&#62; </label>
+					<label><input type="radio" name="bold" value="false"> &#60;br&#62; </label>
+					<br>
+					<label for="Q4">4) What OS do you Use?</label>
+					<br>
+					<label><input type="checkbox" name="OS[]" id="os1" value="linux"> linux</label>
+					<label><input type="checkbox" name="OS[]" id="os2" value="macOS">MacOS</label>
+					<label><input type="checkbox" name="OS[]" id="os3" value="windows">Windows</label>
+					<label><input type="checkbox" name="OS[]" id="os4" value="other">Other</label>
+					<br>
+					<label for="Q5">5) What is the Capitol of Texas?</label>
+					<br>
+					<label><input type="radio" name=capital value="false">Brownsville</label>
+					<label><input type="radio" name=capital value="false">San Antonio</label>
+					<label><input type="radio" name=capital value="false">San Angelo</label>
+					<label><input type="radio" name=capital value="true">Austin</label>
+					<br>
+					<label for="Q6">6) What is Edible? <u>(Multiple)</u></label>
+					<br>
+					<label><input type="checkbox" value="0.2">Chocolate</label>
+					<label><input type="checkbox" value="0">Tire</label>
+					<label><input type="checkbox" value="0">Glass</label>
+					<label><input type="checkbox" value="0">Metal</label>
+					<label><input type="checkbox" value="0.2">Pudding</label>
+					<label><input type="checkbox" value="0.2">Pizza</label>
+					<label><input type="checkbox" value="0.2">Meat</label>
+					<br>
+					<label><input type="checkbox" value="0">Plastic</label>
+					<label><input type="checkbox" value="0">Wood</label>
+					<label><input type="checkbox" value="0">Gasoline</label>
+					<label><input type="checkbox" value="0.2">Burgers</label>
+					<label><input type="checkbox" value="0">Refrigerant</label>
+					<br>
+					<button type="submit" value="MCTSubmit">Submit</button>
+				</form>
+			</div>
+			<hr>
+			<div class="panel">
+				<h2>Select Testing</h2>
+				<form method="POST" action="php/index.php" name="drop_down">
+					<label for="trans">Select Transmition Type</label>
+					<select id="Transmition" name="Transmition">
+						<option selected value="0">null</option>
+						<option value="automatic">Atuomatic</option>
+						<option value="manuel">Manueal</option>
+						<option value="flintston">Foot Power</option>
+						<option value="other">Other</option>
+					</select>
+					<br>
+					<br>
+					<br>
+						<label for="trans2">Select multi-Transmition Type <u>(Press Ctrl to Select Multiple)</u></label>
+					<select id="Transmition2" name="Transmition2" multiple>
+						<option value="0">null</option>
+						<option value="automatic">Atuomatic</option>
+						<option value="manuel">Manueal</option>
+						<option value="flintston">Foot Power</option>
+						<option value="other">Other</option>
+					</select>
+					<br>
+					<br>
+					<label for="multi"> Begin?
+						<select id="multi" name="multi">
+							<option selected value="1">yes</option>
+							<option value="0">no</option>
+							<option value="">unsure</option>
+						</select>
+					</label>
+					<br>
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+			<hr>
+		 </div>
+		 <hr>
+		 <br>
+		 <br>
+		 <footer class="footer">
+			<span class="right  arw"><a href="#top"><b>&#8593;</b></a></span>
+		 </footer>
+	 <script type="text/javascript">
+	 	console.log("running internal JavaScript");
+	 	let slideIndex = 1;
+		showSlides(slideIndex);
+		// Next/previous controls
+		function plusSlides(n) {
+  			showSlides(slideIndex += n);
+		}
+		// Thumbnail image controls
+		function currentSlide(n) {
+  			showSlides(slideIndex = n);
+		}
+		function showSlides(n) {
+  			let i;
+  			let slides = document.getElementsByClassName("mySlides");
+  			let dots = document.getElementsByClassName("dot");
+  			if (n > slides.length) {slideIndex = 1} 
+  			if (n < 1) {slideIndex = slides.length}
+  			for (i = 0; i < slides.length; i++) {
+    		slides[i].style.display = "none"; 
+  		}
+  		for (i = 0; i < dots.length; i++) {
+    		dots[i].className = dots[i].className.replace(" active", "");
+  		}
+  		slides[slideIndex-1].style.display = "block"; 
+  		dots[slideIndex-1].className += " active";
+		}
+	  </script>
+	 </body>
+	 </html>
+
+
+
+
+
+
