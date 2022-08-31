@@ -62,3 +62,24 @@ console.log(arr5)
     }
     return acc;}, new Set());
 console.log(arr6);
+
+
+
+
+
+
+let uniqueLanguages = users.reduce(function(uniqueSoFar, user){
+    for(let language of user.languages){
+        uniqueSoFar.add(language)
+    }
+    return uniqueSoFar;
+}, new Set());
+console.log(uniqueLanguages);
+
+const longestEmail = users.reduce(function(longestEmailSoFar, user){
+    if(user.email.length> longestEmailSoFar.length){
+        return user.email;
+    }
+    return longestEmailSoFar;
+}, users[0].email);
+console.log(longestEmail);
